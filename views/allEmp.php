@@ -27,6 +27,8 @@
 				</div>
 			</div>
 			<div class="row">
+			<a type="button" href="<?php echo BASE_URL;?>addUser" class="btn btn-primary mr-2 mb-2">Ajouter</a>
+			<a type="button" href="<?php echo BASE_URL;?>home" class="btn btn-primary mr-2 mb-2">Home</a>
 				<div class="col-md-12">
 					<div class="table-wrap">
 						<table class="table table-responsive-xl">
@@ -37,7 +39,7 @@
 						        <th>Email</th>
                                 <th>Matricule</th>
 						        <th>Status</th>
-						        <th>&nbsp;</th>
+						        <th>Action</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -66,10 +68,18 @@
                                      <span class="waiting">Waiting</span>
                                 <?php endif ?>
                                 </td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						      <td class="d-flex flex-row">
+						      	<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
+				          	</button> -->
+							  <form methode="post" action="update">
+								  <input type="hidden" name="id" value="<?php echo $emp['id']?>">
+								  <button class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button>
+							  </form>
+							  <form methode="post" action="delete">
+								  <input type="hidden" name="id" value="<?php echo $emp['id']?>">
+								  <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+							  </form>
 				        	</td>
 						    </tr>
                             <?php endforeach;?> 
