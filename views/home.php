@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - menu with awesome hover </title>
+  <title>Home Page </title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
@@ -24,7 +24,7 @@
                                 <div class="page-title  home text-center">
                                   <span class="heading-page"> Welcome to My Page
                                   </span>
-                                    <p class="mt20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                    <p class="mt20">Welcome to our web application 'Gestion de Conge'</p>
                                 </div>
 
                                 <div class="hexagon-menu clear">
@@ -149,7 +149,7 @@
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
                                                 </span>
-                                                <span class="title">Testimonials</span>
+                                                <span class="title">About</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
