@@ -39,12 +39,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content">
+                                        <a  class="hex-content" href="/GestionDeConge/">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-universal-access"></i>
                                                 </span>
-                                                <span class="title">Welcome</span>
+                                                <span class="title">Home</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -60,12 +60,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content">
+                                        <a  class="hex-content" href="/GestionDeConge/allEmp">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-bullseye"></i>
                                                 </span>
-                                                <span class="title">About</span>
+                                                <span class="title">Employes</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -81,12 +81,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content">
+                                        <a  class="hex-content" href="/GestionDeConge/Services"> 
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-braille"></i>
                                                 </span>
-                                                <span class="title">Services</span>
+                                                <span class="title">Calendrier</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>    
@@ -102,12 +102,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content">
+                                        <a  class="hex-content" href="/GestionDeConge/Contact">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-id-badge"></i>
                                                 </span>
-                                                <span class="title">Resume</span>
+                                                <span class="title">Contactez-Nous</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -123,7 +123,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content">
+                                        <a  class="hex-content" href="/GestionDeConge/#">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-life-ring"></i>
@@ -144,12 +144,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content">
+                                        <a  class="hex-content" href="/GestionDeConge/about">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
                                                 </span>
-                                                <span class="title">About</span>
+                                                <span class="title">A propos</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -165,12 +165,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content">
+                                        <a  class="hex-content" href="/GestionDeConge/other">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-map-signs"></i>
                                                 </span>
-                                                <span class="title">Contact</span>
+                                                <span class="title">Conge</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>

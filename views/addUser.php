@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="./public/styleMenu.css">
 	
     </head>
-	<body>
+	<body style="background-color: black">
 	<nav class="navbar navbar-expand-custom navbar-mainbg">
         <a class="navbar-brand navbar-logo" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

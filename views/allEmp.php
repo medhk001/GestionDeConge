@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="./public/css/style.css">
 
 	</head>
-	<body>
+	<body style="background-color: black">
 	<nav class="navbar navbar-expand-custom navbar-mainbg">
         <a class="navbar-brand navbar-logo" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,22 +29,22 @@
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                    <a class="nav-link" href="/GestionDeConge/"><i class="fa fa-universal-access"></i>Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Address Book</a>
+                    <a class="nav-link" href="/GestionDeConge/allEmp"><i class="fa fa-bullseye"></i>Employes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-clone"></i>Components</a>
+                    <a class="nav-link" href="javascript:void(0);"><i class="fa fa-map-signs"></i>Conge</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>Calendar</a>
+                    <a class="nav-link" href="javascript:void(0);"><i class="fa fa-braille"></i>Calendrier</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Charts</a>
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Mon Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Documents</a>
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Contact</a>
                 </li>
             </ul>
         </div>
@@ -98,7 +98,7 @@
                                      <span class="waiting">Waiting</span>
                                 <?php endif ?>
                                 </td>
-						      <td class="d-flex flex-row">
+						      <td>
 						      	<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
 				          	</button> -->
