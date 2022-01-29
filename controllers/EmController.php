@@ -5,6 +5,17 @@ class EmController{
             $employes = Employe::getAll();
             return $employes;
     }
+
+    public function getEm(){
+        if(isset($_POST['id'])){
+            $data = array(
+                'id' => $_POST['id']
+            );
+            $employe = Employe::get($data);
+            return $employe;
+        }
+    }
+    
     public function add(){
         if(isset($_POST['submit'])){
             $data = array(

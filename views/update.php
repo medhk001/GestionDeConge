@@ -1,10 +1,10 @@
-
 <?php 
-if(isset($_POST['submit'])){
-    $data = new EmController();
-    $pages = $data->add();
+if(isset($_POST['id'])){
+    $exdata = new EmController();
+    $exEm = $exdata->getEm();
 }
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Nom</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="Nom">
+                                    <input class="input--style-5" type="text" value="<?php echo $exEm->Nom;?>" name="Nom">
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Prenom</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="Prenom">
+                                    <input class="input--style-5" type="text" value="<?php echo $exEm->Prenom; ?>" name="Prenom">
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Matricul</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="Matricul">
+                                    <input class="input--style-5" type="text" value="<?php echo $exEm->Matricul; ?>" name="Matricul">
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Address</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="Addres">
+                                    <input class="input--style-5" type="text" value="<?php echo $exEm->Addres; ?>" name="Addres">
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="Email">
+                                    <input class="input--style-5" type="email" value="<?php echo $exEm->Email; ?>" name="Email">
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Password</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="password" name="pwd">
+                                    <input class="input--style-5" type="password" value="<?php echo $exEm->pwd; ?>" name="pwd">
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Departement</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="Departement">
+                                    <input class="input--style-5" type="text" value="<?php echo $exEm->Departement; ?>" name="Departement">
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Poste</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="Poste">
+                                    <input class="input--style-5" type="text" value="<?php echo $exEm->Poste; ?>" name="Poste">
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@ if(isset($_POST['submit'])){
                             <div class="name">Date d'embauche</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" place_holder="JJ/MM/AAAA" name="date_Emb">
+                                    <input class="input--style-5" type="text" place_holder="JJ/MM/AAAA" value="<?php echo $exEm->date_Emb; ?>" name="date_Emb">
                                 </div>
                             </div>
                         </div>
@@ -174,7 +174,7 @@ if(isset($_POST['submit'])){
                             <label class="label label--block">Quel est son rôle ?</label>
                             <div class="p-t-15">
                                 <label class="radio-container m-r-55">Responsable/Chef
-                                    <input type="radio" checked="checked" value="Admin" name="Statut">
+                                    <input type="radio" value="Admin" name="Statut">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-container">Employe

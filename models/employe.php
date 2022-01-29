@@ -12,10 +12,12 @@ class Employe{
         $id = $data['id'];
         try{
             $query = 'SELECT * FROM gc WHERE id=:id';
-            $stmt =  $stmt = DB::connect()->prepare($query);
+            $stmt = DB::connect()->prepare($query);
             $stmt->execute(array(':id'=> $id));
             $employe = $stmt->fetch(PDO::FETCH_OBJ);
             return $employe;
+            $stmt->close();
+            $stmt = null;
         }catch(PDOException $ex){
             echo 'erreur'.$ex->getMEssage();
         }
