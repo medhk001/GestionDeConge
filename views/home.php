@@ -39,7 +39,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content" href="/GestionDeConge/">
+                                        <a  class="hex-content" href="<?php echo BASE_URL;?>">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-universal-access"></i>
@@ -60,7 +60,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content" href="/GestionDeConge/allEmp">
+                                        <a  class="hex-content" href="<?php echo BASE_URL;?>allEmp">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-bullseye"></i>
@@ -81,7 +81,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content" href="/GestionDeConge/Services"> 
+                                        <a  class="hex-content" href="<?php echo BASE_URL;?>calendrier"> 
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-braille"></i>
@@ -102,7 +102,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content" href="/GestionDeConge/Contact">
+                                        <a  class="hex-content" href="<?php echo BASE_URL;?>Contact">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-id-badge"></i>
@@ -123,7 +123,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content" href="/GestionDeConge/#">
+                                        <a  class="hex-content" href="<?php echo BASE_URL;?>#">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-life-ring"></i>
@@ -144,7 +144,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content" href="/GestionDeConge/about">
+                                        <a  class="hex-content" href="<?php echo BASE_URL;?>about">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
@@ -165,7 +165,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a  class="hex-content" href="/GestionDeConge/other">
+                                        <a  class="hex-content" href="<?php echo BASE_URL;?>conge">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-map-signs"></i>

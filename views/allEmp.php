@@ -21,7 +21,7 @@
 	</head>
 	<body style="background-color: black">
 	<nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">Navbar</a>
+        <a class="navbar-brand navbar-logo" href="<?php echo BASE_URL;?>">GDC</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
         </button>
@@ -29,16 +29,16 @@
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                 <li class="nav-item">
-                    <a class="nav-link" href="/GestionDeConge/"><i class="fa fa-universal-access"></i>Home</a>
+                    <a class="nav-link" href="<?php echo BASE_URL;?>"><i class="fa fa-universal-access"></i>Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/GestionDeConge/allEmp"><i class="fa fa-bullseye"></i>Employes</a>
+                    <a class="nav-link" href="<?php echo BASE_URL;?>allEmp"><i class="fa fa-bullseye"></i>Employes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0);"><i class="fa fa-map-signs"></i>Conge</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fa fa-braille"></i>Calendrier</a>
+                    <a class="nav-link" href="<?php echo BASE_URL;?>calendrier"><i class="fa fa-braille"></i>Calendrier</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Mon Profile</a>
