@@ -8,6 +8,19 @@ class Employe{
         $stmt = null; 
     }
 
+    static public function get($data){
+        $id = $data['id'];
+        try{
+            $query = 'SELECT * FROM gc WHERE id=:id';
+            $stmt =  $stmt = DB::connect()->prepare($query);
+            $stmt->execute(array(':id'=> $id));
+            $employe = $stmt->fetch(PDO::FETCH_OBJ);
+            return $employe;
+        }catch(PDOException $ex){
+            echo 'erreur'.$ex->getMEssage();
+        }
+    }
+
     static public function add($data){
         $stmt = DB::connect()->prepare('INSERT INTO gc (Nom,Prenom,Matricul,Email,Sexe,date_Emb,pwd,Addres,Departement,Poste,Statut,Etat) VALUES (:Nom,:Prenom,:Matricul,:Email,:Sexe,:date_Emb,:pwd,:Addres,:Departement,:Poste,:Statut,:Etat)'); 
         $stmt->bindParam(':Nom',$data['Nom']);
@@ -31,6 +44,7 @@ class Employe{
         $stmt = null;
 
     }
+
 }
 
 ?>

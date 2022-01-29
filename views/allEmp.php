@@ -92,7 +92,7 @@
 						      <td><?php echo $emp['Email']?></td>
 						      <td><?php echo $emp['Matricul']?></td>
 						      <td class="status" >
-                                <?php if($emp['Etat'] == "active"): ?>
+                                <?php if($emp['Etat'] === "Active"): ?>
                                      <span class="active">Active</span>
                                 <?php else: ?>
                                      <span class="waiting">Waiting</span>
