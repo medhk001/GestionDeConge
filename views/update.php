@@ -1,10 +1,15 @@
 <?php 
+
 if(isset($_POST['id'])){
-    // die(print_r($_POST[('id')]));
+    die(print_r($_POST['id']));
     $exdata = new EmController();
     $exEm = $exdata->getEm();
-    print_r($exEm);
+    //print_r($exEm);
+}else{
+    die(print_r($_POST));
+    $exEm = "error";
 }
+
 ?>
 
 <!doctype html>

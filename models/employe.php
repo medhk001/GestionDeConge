@@ -10,7 +10,7 @@ class Employe{
     }
 
     static public function get($data){
-       // die(print_r($data));
+       die(print_r($data));
         $id = $data['id'];
         try{
             $query = 'SELECT * FROM gc WHERE id=:id';
