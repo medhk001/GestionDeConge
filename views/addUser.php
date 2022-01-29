@@ -2,7 +2,7 @@
 <?php 
 if(isset($_POST['submit'])){
     $data = new EmController();
-    $pages = $data->add();
+    $pages = $data->addEm();
 }
 ?>
 <!doctype html>

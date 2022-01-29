@@ -103,11 +103,11 @@
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
 				          	</button> -->
 							  <form methode="post" action="update">
-								  <input type="hidden" name="id" value="<?php echo $emp['id']?>">
+								  <input type="hidden" name="id" value="<?php echo $emp['id'];?>">
 								  <button class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button>
 							  </form>
 							  <form methode="post" action="delete">
-								  <input type="hidden" name="id" value="<?php echo $emp['id']?>">
+								  <input type="hidden" name="id" value="<?php echo $emp['id'];?>">
 								  <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
 							  </form>
 				        	</td>

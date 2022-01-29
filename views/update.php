@@ -1,7 +1,9 @@
 <?php 
 if(isset($_POST['id'])){
+    // die(print_r($_POST[('id')]));
     $exdata = new EmController();
     $exEm = $exdata->getEm();
+    print_r($exEm);
 }
 ?>
 
@@ -184,7 +186,7 @@ if(isset($_POST['id'])){
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn--radius-2 btn--red" name='submit' type="submit">Register</button>
+                            <button class="btn btn--radius-2 btn--red" name='submit' type="submit">Modifier</button>
                         </div>
                     </form>
                 </div>
