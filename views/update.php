@@ -1,7 +1,6 @@
 <?php 
 
 if(isset($_POST['id'])){
-    die(print_r($_POST['id']));
     $exdata = new EmController();
     $exEm = $exdata->getEm();
 }else{

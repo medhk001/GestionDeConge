@@ -6,7 +6,7 @@ class User{
         try{
             $query = 'SELECT * FROM gc WHERE Matricul=:Matriclul';
             $stmt = DB::connect()->prepare($query);
-            $stmt->execute(array(':Matricul'=> $Matricul));
+            $stmt->execute(array(':Matricul' => $Matricul));
             $user = $stmt->fetch(PDO::FETCH_OBJ);
             return $user;
             if($stmt->execute()){

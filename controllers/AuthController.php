@@ -10,9 +10,11 @@ class AuthController{
                 $_SESSION['logged'] = true;
                 $_SESSION['Matricul'] = $result->Matricul;
                 // Redirect::to('home');
+                header('location:'.BASE_URL);
             }else {
                 // Session::set('error','Matricul ou mot de passe est incorrect');
                 // Redirect::to('login');
+                echo 'err';
             }
         }
     }
