@@ -58,7 +58,6 @@
 			</div>
 			<div class="row">
 			<a type="button" href="<?php echo BASE_URL;?>addUser" class="btn btn-primary mr-2 mb-2">Ajouter</a>
-			<a type="button" href="<?php echo BASE_URL;?>home" class="btn btn-primary mr-2 mb-2">Home</a>
 				<div class="col-md-12">
 					<div class="table-wrap">
 						<table class="table table-responsive-xl">
@@ -102,12 +101,12 @@
 						      	<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
 				          	</button> -->
-							  <form methode="post" action="update">
-								  <input type="hidden" name="id" value="<?php echo $emp['id'] ?>">
+							  <form method="post" action="update">
+								  <input type="hidden" name="id" value="<?php echo $emp['id']; ?>">
 								  <button class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button>
 							  </form>
-							  <form methode="post" action="delete">
-								  <input type="hidden" name="id" value="<?php echo $emp['id'] ?>">
+							  <form method="post" action="delete">
+								  <input type="hidden" name="id" value="<?php echo $emp['id']; ?>">
 								  <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
 							  </form>
 				        	</td>

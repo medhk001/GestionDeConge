@@ -7,6 +7,7 @@ class EmController{
     }
 
     public function getEm(){
+        die(print_r($_POST['id']));
         if(isset($_POST['id'])){
             $data = array(
                 'id' => $_POST['id']
