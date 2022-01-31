@@ -79,17 +79,17 @@ footer{text-align: center;margin-top: 3%;}
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>"><i class="fa fa-universal-access"></i>Home</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="<?php echo BASE_URL;?>allEmp"><i class="fa fa-bullseye"></i>Employes</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="<?php echo BASE_URL;?>demandeConge"><i class="fa fa-map-signs"></i>Conge</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>calendrier"><i class="fa fa-braille"></i>Calendrier</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL;?>Profile"><i class="far fa-chart-bar"></i>Mon Profile</a>
+				<a class="nav-link" href="<?php if(isset($_SESSION['Admin'])){ echo BASE_URL.'dashboard'; }else{ echo BASE_URL.'Profile';}?>"><i class="far fa-chart-bar"></i>Mon Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>Contact"><i class="far fa-copy"></i>Contact</a>

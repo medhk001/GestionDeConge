@@ -61,7 +61,7 @@ if(isset($_POST['submit'])){
                     <a class="nav-link" href="<?php echo BASE_URL;?>calendrier"><i class="fa fa-braille"></i>Calendrier</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL;?>Profile"><i class="far fa-chart-bar"></i>Mon Profile</a>
+				<a class="nav-link" href="<?php if(isset($_SESSION['Admin'])){ echo BASE_URL.'dashboard'; }else{ echo BASE_URL.'Profile';}?>"><i class="far fa-chart-bar"></i>Mon Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>Contact"><i class="far fa-copy"></i>Contact</a>

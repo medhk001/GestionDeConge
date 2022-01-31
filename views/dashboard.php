@@ -15,29 +15,20 @@
         <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#"
                                                                                    class="brand-logo"><i
                 class="fas fa-anchor"></i> <span>BRAND</span></a></header>
-        <nav class="dashboard-nav-list"><a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i>
+        <nav class="dashboard-nav-list"><a href="<?php echo BASE_URL;?>" class="dashboard-nav-item"><i class="fas fa-home"></i>
             Home </a><a
-                href="#" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> dashboard
+                href="<?php echo BASE_URL;?>dashboard" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> dashboard
         </a>
-        <a href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Upload </a>
-            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+        <!-- <a href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Upload </a> -->
+            <div class='dashboard-nav-dropdown'><a href="#" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
                     class="fas fa-users"></i> Users </a>
                 <div class='dashboard-nav-dropdown-menu'><a href="<?php echo BASE_URL;?>allEmp"
                                                             class="dashboard-nav-dropdown-item">All</a><a
                         href="<?php echo BASE_URL;?>addUser" class="dashboard-nav-dropdown-item">Ajouter</a>
-                        <!-- <a href="#" class="dashboard-nav-dropdown-item">Modifier</a> -->
                         <a href="<?php echo BASE_URL;?>search" class="dashboard-nav-dropdown-item">Chercher</a>
                         
                     </div>
             </div>
-            <!-- <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
-                    class="fas fa-money-check-alt"></i> Payments </a>
-                <div class='dashboard-nav-dropdown-menu'><a href="#"
-                                                            class="dashboard-nav-dropdown-item">All</a><a
-                        href="#" class="dashboard-nav-dropdown-item">Recent</a><a
-                        href="#" class="dashboard-nav-dropdown-item"> Projections</a>
-                </div>
-            </div> -->
             <a href="#" class="dashboard-nav-item"><i class="fas fa-cogs"></i> Settings </a>
           <div class="nav-item-divider"></div>
           <a
@@ -52,9 +43,7 @@
                     <div class='card-header'>
                         <h1>Welcome back </h1>
                     </div>
-                    <!-- <div class='card-body'>
-                        <p>Your account type is: Administrator</p>
-                    </div> -->
+                   
                 </div>
             </div>
         </div>
