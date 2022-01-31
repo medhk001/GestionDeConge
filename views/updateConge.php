@@ -1,16 +1,26 @@
-<?php
+<?php 
 
-if (isset($_POST['datedepart']) & isset($_POST['dateretour'])){
-	$data = new CongeController();
-    $pages = $data->demande();
+if(isset($_POST['id'])){
+    $exdata = new CongeController();
+    $exEm = $exdata->getAllConge();
 }
+if(isset($_POST['submit'])){
+    die(print_r($_POST['submit']));
+    $Codata = new CongeController();
+    $COEm = $Codata->updateConge();
+}
+// else{
+//     die(print_r($_POST['id']));
+//     $exEm = "error";
+// }
 
 ?>
 
-<html>
-<head>
-	<title> Demander un congé</title>
-	<style type="text/css">
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Table User</title>
+      <style type="text/css">
 a{
 text-decoration: none;	
 }
@@ -57,7 +67,7 @@ background-color: rgb(151,199,222);
 footer{text-align: center;margin-top: 3%;}
 
 	</style>
-	<meta charset="utf-8">
+   	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -67,8 +77,8 @@ footer{text-align: center;margin-top: 3%;}
 	<link rel="stylesheet" href="./public/styleMenu.css">
 
 </head>	
-<body style="background-color:black">
-<nav class="navbar navbar-expand-custom navbar-mainbg">
+	<body style="background-color: black">
+	<nav class="navbar navbar-expand-custom navbar-mainbg">
         <a class="navbar-brand navbar-logo" href="<?php echo BASE_URL;?>">GDC</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
@@ -97,20 +107,21 @@ footer{text-align: center;margin-top: 3%;}
             </ul>
         </div>
     </nav>
+    <br>
 	<br>
 	<br>
-	<br>
-	<div class="container">
+
+    <div class="container">
 <fieldset style="margin-left:25%"><legend><img src="./public/images/demande.png"></legend>
 <form method="post">
 	
-	<p class="confirm"><em> Conge</em></p>
+	<p class="confirm"><em> Modifier le Conge</em></p>
 <input type="hidden" name="Matricul" value='AZERTY'>
 <input type="hidden" name="dateajout" value='<?php echo date("Y/m/d");?>'>
-<label>Date Départ: </label> <input type="date" name="datedepart" required>
-<label style="margin-left:1em;">Date Retour : </label><input type="date" name="dateretour" required><br><br>
+<label>Date Départ: </label> <input type="date" name="datedepart" value='<?php echo $exEm->datedepart;?>' required>
+<label style="margin-left:1em;">Date Retour : </label><input type="date" name="dateretour" value='<?php echo $exEm->dateretour;?>' required><br><br>
 <select class="form-select form-select-sm" name='typeConge' aria-label=".form-select-sm example">
-  <option selected value='#'>Selection le type de conge/absence </option>
+  <option selected value='#'>value='<?php echo $exEm->typeConge;?>'</option>
   <option value="congés payés">congés payés</option>
   <option value="congés sans solde">congés sans solde</option>
   <option value="maladie">maladie</option>
@@ -120,7 +131,13 @@ footer{text-align: center;margin-top: 3%;}
   <option value="décès d'un proche">décès d'un proche</option>
   <option value="récupération d'heures supplémentaires">récupération d'heures supplémentaires</option>
 </select><br><br>
-<input type="submit" value="Envoyer la demande" > 
+<select class="form-select form-select-sm" name='etat' aria-label=".form-select-sm example">
+  <option selected value='#'>value='<?php echo $exEm->etat;?>'</option>
+  <option value="Accepte">Accepte</option>
+  <option value="Refuses">Refuses</option>
+  <option value="Encours de traitement">Encours de traitement</option>
+</select><br><br>
+<input type="submit" value="Envoyer la modification" > 
 </form>
 </fieldset>
 

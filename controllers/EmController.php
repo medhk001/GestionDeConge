@@ -25,23 +25,23 @@ class EmController{
             ];
             $password = password_hash($_POST['pwd'],PASSWORD_BCRYPT,$option);
             $data = array(
-                'Nom' => $_POST[('Nom')],
-                'Prenom' => $_POST[('Prenom')],
-                'Matricul' => $_POST[('Matricul')],
-                'Sexe' => $_POST[('Sexe')],
-                'date_Emb' => $_POST[('date_Emb')],
-                'Addres' => $_POST[('Addres')],
-                'Email' => $_POST[('Email')],
+                'Nom' => $_POST['Nom'],
+                'Prenom' => $_POST['Prenom'],
+                'Matricul' => $_POST['Matricul'],
+                'Sexe' => $_POST['Sexe'],
+                'date_Emb' => $_POST['date_Emb'],
+                'Addres' => $_POST['Addres'],
+                'Email' => $_POST['Email'],
                 'pwd' => $password,
-                'Departement' => $_POST[('Departement')],
-                'Poste' => $_POST[('Poste')],
-                'Statut' => $_POST[('Statut')],
-                'Etat' => $_POST[("Etat")],
+                'Departement' => $_POST['Departement'],
+                'Poste' => $_POST['Poste'],
+                'Statut' => $_POST['Statut'],
+                'Etat' => $_POST["Etat"],
             );
             $result = Employe::add($data);
             if($result === 'ok'){
                 //Session::set('success','Employe Ajoute');
-                header('location:'.BASE_URL);
+                header('location:'.BASE_URL.'allEmp');
             }else{
                 echo $result;
             }
@@ -50,26 +50,29 @@ class EmController{
 
     public function updateEm(){
         if(isset($_POST['submit'])){
+            $option = [
+                'cost' => 12
+            ];
+            $password = password_hash($_POST['pwd'],PASSWORD_BCRYPT,$option);
             $data = array(
-                'id' => $_POST[('id')],
-                'Nom' => $_POST[('Nom')],
-                'Prenom' => $_POST[('Prenom')],
-                'Matricul' => $_POST[('Matricul')],
-                'Sexe' => $_POST[('Sexe')],
-                'date_Emb' => $_POST[('date_Emb')],
-                'Addres' => $_POST[('Addres')],
-                'Email' => $_POST[('Email')],
-                'pwd' => $_POST[('pwd')],
-                'Departement' => $_POST[('Departement')],
-                'Poste' => $_POST[('Poste')],
-                'Statut' => $_POST[('Statut')],
-                'Etat' => $_POST[("Etat")],
-
+                'id' => $_POST['id'],
+                'Nom' => $_POST['Nom'],
+                'Prenom' => $_POST['Prenom'],
+                'Matricul' => $_POST['Matricul'],
+                'Sexe' => $_POST['Sexe'],
+                'date_Emb' => $_POST['date_Emb'],
+                'Addres' => $_POST['Addres'],
+                'Email' => $_POST['Email'],
+                'pwd' => $password,
+                'Departement' => $_POST['Departement'],
+                'Poste' => $_POST['Poste'],
+                'Statut' => $_POST['Statut'],
+                'Etat' => $_POST["Etat"],
             );
             $result = Employe::update($data);
             if($result === 'ok'){
               //  Session::set('success','Employe Modifier');
-                header('location:'.BASE_URL);
+                header('location:'.BASE_URL.'allEmp');
             }else{
                 echo $result;
             }
@@ -82,7 +85,7 @@ class EmController{
             $result = Employe::delete($data);
             if($result === 'ok'){
                // Session::set('success','Employe Supprime');
-                header('location:'.BASE_URL);
+                header('location:'.BASE_URL.'allEmp');
             }else{
                 echo $result;
             }

@@ -1,6 +1,6 @@
 <?php
-    $data = new EmController();
-    $employes = $data->getAllEm();
+    $data = new CongeController();
+    $Conge = $data->getMonConge();
     // print_r($employes);
 ?>
 
@@ -26,7 +26,7 @@
         <i class="fas fa-bars text-white"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>"><i class="fa fa-universal-access"></i>Home</a>
@@ -50,29 +50,31 @@
         </div>
     </nav>
 	<section class="ftco-section">
-		<div class="container">
+		<div style='background-color: grey' class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Table User</h2>
+					<h2 class="heading-section">Table Conge</h2>
 				</div>
 			</div>
 			<div class="row">
-			<a type="button" href="<?php echo BASE_URL;?>addUser" class="btn btn-primary mr-2 mb-2">Ajouter</a>
 				<div class="col-md-12">
 					<div class="table-wrap">
 						<table class="table table-responsive-xl">
 						  <thead>
 						    <tr>
 						    	<th>&nbsp;</th>
-						        <th>Nom Prenom</th>
-						        <th>Email</th>
-                                <th>Matricule</th>
-						        <th>Status</th>
-						        <th>Action</th>
+						        <th>Matricule</th>
+						        <th>date_de_depart</th>
+                                <th>date_de_retour</th>
+						        <th>date_d'ajout</th>
+						        <th>type_de_conge</th>
+						        <th>etat</th>
+                                <th>&nbsp;</th>
+
 						    </tr>
 						  </thead>
 						  <tbody>
-                          <?php foreach($employes as $emp):?> 
+                          <?php foreach($Conge as $emp):?> 
 						    <tr class="alert" role="alert">
 						    	<td>
 						    		<label class="checkbox-wrap checkbox-primary">
@@ -83,29 +85,25 @@
 						      <td class="d-flex align-items-center">
 						      	<div class="img" style="background-image: url(./public/images/person_1.jpg);"></div>
 						      	<div class="pl-3 email">
-								  <h6><b><?php echo $emp['Nom']." ".$emp['Prenom']?></b></h6>
-						      		<span><?php echo "Date d'embauche : ".$emp['date_Emb']?></span>
-						      		<span><?php echo "Sexe : ".$emp['Sexe']?></span>
+								  <h6><b><?php echo $emp['Matricul']?></b></h6>
+                                  <span>   </span>
+                                  <span>   </span>
 						      	</div>
 						      </td>
-						      <td><?php echo $emp['Email']?></td>
-						      <td><?php echo $emp['Matricul']?></td>
-						      <td class="status" >
-                                <?php if($emp['Etat'] === "Active"): ?>
-                                     <span class="active">Active</span>
-                                <?php else: ?>
-                                     <span class="waiting">Waiting</span>
-                                <?php endif ?>
-                                </td>
+						      <td><?php echo $emp['datedepart']?></td>
+						      <td><?php echo $emp['dateretour']?></td>
+                              <td><?php echo $emp['dateajout']?></td>
+						      <td><?php echo $emp['typeConge']?></td>
+						      <td><?php echo $emp['etat']?></td>
 						      <td>
 						      	<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
 				          	</button> -->
-							  <form method="post" action="update">
+							  <form method="post" action="updateConge">
 								  <input type="hidden" name="id" value="<?php echo $emp['id']; ?>">
 								  <button class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button>
 							  </form>
-							  <form method="post" action="delete">
+							  <form method="post" action="deleteConge">
 								  <input type="hidden" name="id" value="<?php echo $emp['id']; ?>">
 								  <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
 							  </form>

@@ -3,10 +3,15 @@
 if(isset($_POST['id'])){
     $exdata = new EmController();
     $exEm = $exdata->getEm();
-}else{
-    die(print_r($_POST['id']));
-    $exEm = "error";
 }
+if(isset($_POST['submit'])){
+    $exdata = new EmController();
+    $exEm = $exdata->updateEm();
+}
+// else{
+//     die(print_r($_POST['id']));
+//     $exEm = "error";
+// }
 
 ?>
 
@@ -46,20 +51,20 @@ if(isset($_POST['id'])){
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>"><i class="fa fa-universal-access"></i>Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="<?php echo BASE_URL;?>allEmp"><i class="fa fa-bullseye"></i>Employes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fa fa-map-signs"></i>Conge</a>
+                    <a class="nav-link" href="<?php echo BASE_URL;?>demandeConge"><i class="fa fa-map-signs"></i>Conge</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>calendrier"><i class="fa fa-braille"></i>Calendrier</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-chart-bar"></i>Mon Profile</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo BASE_URL;?>Profile"><i class="far fa-chart-bar"></i>Mon Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-copy"></i>Contact</a>
+                    <a class="nav-link" href="<?php echo BASE_URL;?>Contact"><i class="far fa-copy"></i>Contact</a>
                 </li>
             </ul>
         </div>
@@ -74,7 +79,7 @@ if(isset($_POST['id'])){
                 <div class="card-body">
                     <form method="POST">
                         <div class="form-row">
-                            <div class="name">Nom</div>
+                        <div class="name">Nom</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-5" type="text" value="<?php echo $exEm->Nom;?>" name="Nom">
@@ -160,6 +165,7 @@ if(isset($_POST['id'])){
                                 </div>
                             </div>
                         </div>
+                        <input class="input--style-5" type="hidden" value="<?php echo $exEm->id;?>" name="id">
                         <div class="form-row">
                             <div class="name">Etat</div>
                             <div class="value">

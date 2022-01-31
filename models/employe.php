@@ -49,7 +49,9 @@ class Employe{
     }
 
     static public function update($data){
+        // $id = $data['id'];
         $stmt = DB::connect()->prepare('UPDATE gc SET Nom = :Nom, Prenom = :Prenom, Matricul = :Matricul, Email = :Email, Sexe = :Sexe, date_Emb= :date_Emb, pwd = :pwd, Addres = :Addres, Departement = :Departement, Poste = :Poste, Statut = :Statut, Etat = :Etat WHERE id = :id'); 
+        $stmt->bindParam(':id',$data['id']);
         $stmt->bindParam(':Nom',$data['Nom']);
         $stmt->bindParam(':Prenom',$data['Prenom']);
         $stmt->bindParam(':Matricul',$data['Matricul']);
