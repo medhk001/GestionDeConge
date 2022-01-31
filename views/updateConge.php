@@ -5,14 +5,9 @@ if(isset($_POST['id'])){
     $exEm = $exdata->getConge();
 }
 if(isset($_POST['submit'])){
-    // die(print_r($_POST['submit']));
     $Codata = new CongeController();
     $COEm = $Codata->updateConge();
 }
-// else{
-//     die(print_r($_POST['id']));
-//     $exEm = "error";
-// }
 
 ?>
 
