@@ -29,6 +29,15 @@
                         
                     </div>
             </div>
+            <div class='dashboard-nav-dropdown'><a href="#" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+                    class="fas fa-users"></i> Conge </a>
+                <div class='dashboard-nav-dropdown-menu'><a href="<?php echo BASE_URL;?>acceptationConge"
+                                                            class="dashboard-nav-dropdown-item">All</a><a
+                        href="<?php echo BASE_URL;?>demandeConge" class="dashboard-nav-dropdown-item">Demande</a>
+                        <a href="<?php echo BASE_URL;?>mesConge" class="dashboard-nav-dropdown-item">Mes Conge</a>
+                        <a href="<?php echo BASE_URL;?>monSolde" class="dashboard-nav-dropdown-item">Mon Solde</a>
+                    </div>
+            </div>
             <a href="#" class="dashboard-nav-item"><i class="fas fa-cogs"></i> Settings </a>
           <div class="nav-item-divider"></div>
           <a

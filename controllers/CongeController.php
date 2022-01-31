@@ -45,7 +45,28 @@ class CongeController{
         }
     }
 
+    public function getConge(){
+        if(isset($_POST['id'])){
+            $data = array(
+                'id' => $_POST['id']
+            );
+            $employe = Conge::getMonConge($data);
+            // die(print_r($employe));
+            return $employe;
+            // if($employe === 'ok'){
+            //     //Session::set('success','Employe Ajoute');
+            //     header('location:'.BASE_URL.'mesConge');
+            // }else{
+            //     echo $employe;
+            // }
+        }else{
+            return 'err';
+        }
+    }
+
     public function updateConge(){
+        // die(print_r($_POST['id']));
+        if(isset($_POST['submit'])){
             $data = array(
                 'id' => $_POST['id'],
                 'datedepart' => $_POST['datedepart'],
@@ -56,11 +77,12 @@ class CongeController{
             $result = Conge::updateConge($data);
             if($result === 'ok'){
               //  Session::set('success','Employe Modifier');
-                header('location:'.BASE_URL.'allEmp');
+                header('location:'.BASE_URL.'acceptationConge');
             }else{
                 echo $result;
             }
         }
+    }
     
 
     public function deleteCong(){

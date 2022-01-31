@@ -111,14 +111,14 @@ footer{text-align: center;margin-top: 3%;}
 <label style="margin-left:1em;">Date Retour : </label><input type="date" name="dateretour" required><br><br>
 <select class="form-select form-select-sm" name='typeConge' aria-label=".form-select-sm example">
   <option selected value='#'>Selection le type de conge/absence </option>
-  <option value="congés payés">congés payés</option>
-  <option value="congés sans solde">congés sans solde</option>
-  <option value="maladie">maladie</option>
-  <option value="congés maternité/paternité">congés maternité/paternité</option>
-  <option value="absences pour mariage">absences pour mariage</option>
-  <option value="naissance d'un proche">naissance d'un proche</option>
-  <option value="décès d'un proche">décès d'un proche</option>
-  <option value="récupération d'heures supplémentaires">récupération d'heures supplémentaires</option>
+  <option value="congés payés">Congés payés</option>
+  <option value="congés sans solde">Congés sans solde</option>
+  <option value="maladie">Maladie</option>
+  <option value="congés maternité/paternité">Congés maternité/paternité</option>
+  <option value="absences pour mariage">Absences pour mariage</option>
+  <option value="naissance d'un proche">Naissance d'un proche</option>
+  <option value="décès d'un proche">Décès d'un proche</option>
+  <option value="récupération d'heures supplémentaires">Récupération d'heures supplémentaires</option>
 </select><br><br>
 <input type="submit" value="Envoyer la demande" > 
 </form>

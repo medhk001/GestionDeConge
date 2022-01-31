@@ -19,8 +19,7 @@ class Conge{
     }
 
     static public function updateConge($data){
-        // $id = $data['id'];
-        // die(print_r($data));
+    // $id = $data['id'];
         $stmt = DB::connect()->prepare('UPDATE demande SET datedepart = :datedepart, dateretour = :dateretour, typeConge = :typeConge, etat = :etat  WHERE id = :id'); 
         $stmt->bindParam(':id',$data['id']);
         $stmt->bindParam(':datedepart',$data['datedepart']);
@@ -46,16 +45,30 @@ class Conge{
     }
 
     static public function getMonConge($data){
-        // $Matricul = $data['Matricul'];
-        $stmt = DB::connect()->prepare('SELECT * FROM demande WHERE Matricul= :Matricul');      
-        $stmt->execute();
-        // die(print_r($stmt));
-        return $stmt->fetchAll();
-        $stmt->close();
-        $stmt = null; 
-    }
+            $id = $data['id'];
+            try{
+                $query = 'SELECT * FROM demande WHERE id=:id';
+                $stmt = DB::connect()->prepare($query);
+                $stmt->execute(array(':id'=> $id));
+                $employe = $stmt->fetch(PDO::FETCH_OBJ);
+                return $employe;
+                $stmt->close();
+                $stmt = null;
+                // if($employe->execute()){
+                //     return 'ok';
+                // }else{
+                //     return 'Error';
+                // }
+                // $stmt->close();
+                // $stmt = null;
+            }catch(PDOException $ex){
+                echo 'erreur'.$ex->getMEssage();
+            }
+        }
+  
 
     static public function conge($data){
+        // die(print_r($data));
         $stmt = DB::connect()->prepare('INSERT INTO demande (Matricul,datedepart,dateretour,dateajout,etat,typeConge) VALUES (:Matricul,:datedepart,:dateretour,:dateajout,:etat,:typeConge)'); 
         $stmt->bindParam(':Matricul',$data['Matricul']);
         $stmt->bindParam(':datedepart',$data['datedepart']);

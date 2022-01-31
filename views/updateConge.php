@@ -2,10 +2,10 @@
 
 if(isset($_POST['id'])){
     $exdata = new CongeController();
-    $exEm = $exdata->getAllConge();
+    $exEm = $exdata->getConge();
 }
 if(isset($_POST['submit'])){
-    die(print_r($_POST['submit']));
+    // die(print_r($_POST['submit']));
     $Codata = new CongeController();
     $COEm = $Codata->updateConge();
 }
@@ -89,10 +89,10 @@ footer{text-align: center;margin-top: 3%;}
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo BASE_URL;?>"><i class="fa fa-universal-access"></i>Home</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="<?php echo BASE_URL;?>allEmp"><i class="fa fa-bullseye"></i>Employes</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="<?php echo BASE_URL;?>demandeConge"><i class="fa fa-map-signs"></i>Conge</a>
                 </li>
                 <li class="nav-item">
@@ -116,28 +116,29 @@ footer{text-align: center;margin-top: 3%;}
 <form method="post">
 	
 	<p class="confirm"><em> Modifier le Conge</em></p>
+<input type="hidden" name="id" value="<?php echo $_POST['id'];?>">
 <input type="hidden" name="Matricul" value="<?php echo $_SESSION['Matricul'];?>">
 <input type="hidden" name="dateajout" value='<?php echo date("Y/m/d");?>'>
 <label>Date Départ: </label> <input type="date" name="datedepart" value='<?php echo $exEm->datedepart;?>' required>
 <label style="margin-left:1em;">Date Retour : </label><input type="date" name="dateretour" value='<?php echo $exEm->dateretour;?>' required><br><br>
 <select class="form-select form-select-sm" name='typeConge' aria-label=".form-select-sm example">
-  <option selected value='#'><?php echo $exEm->typeConge;?></option>
-  <option value="congés payés">congés payés</option>
-  <option value="congés sans solde">congés sans solde</option>
-  <option value="maladie">maladie</option>
-  <option value="congés maternité/paternité">congés maternité/paternité</option>
-  <option value="absences pour mariage">absences pour mariage</option>
-  <option value="naissance d'un proche">naissance d'un proche</option>
-  <option value="décès d'un proche">décès d'un proche</option>
-  <option value="récupération d'heures supplémentaires">récupération d'heures supplémentaires</option>
+  <option selected value='<?php if(isset($exEm->typeConge)){  echo $exEm->typeConge; }else{ echo "Null";}?>'><?php if(isset($exEm->typeConge)){  echo $exEm->typeConge; }else{ echo "Null";}?></option>
+  <option value="congés payés">Congés payés</option>
+  <option value="congés sans solde">Congés sans solde</option>
+  <option value="maladie">Maladie</option>
+  <option value="congés maternité/paternité">Congés maternité/paternité</option>
+  <option value="absences pour mariage">Absences pour mariage</option>
+  <option value="naissance d'un proche">Naissance d'un proche</option>
+  <option value="décès d'un proche">Décès d'un proche</option>
+  <option value="récupération d'heures supplémentaires">Récupération d'heures supplémentaires</option>
 </select><br><br>
 <select class="form-select form-select-sm" name='etat' aria-label=".form-select-sm example">
-  <option selected value='#'><?php echo $exEm->etat;?></option>
+  <option selected value='<?php if(isset($exEm->etat)){  echo $exEm->etat; }else{ echo "Null";}?>'><?php if(isset($exEm->etat)){  echo $exEm->etat; }else{ echo "Null";}?></option>
   <option value="Accepte">Accepte</option>
   <option value="Refuses">Refuses</option>
   <option value="Encours de traitement">Encours de traitement</option>
 </select><br><br>
-<input type="submit" value="Envoyer la modification" > 
+<button type="submit" name='submit' >Envoyer la modification</button>
 </form>
 </fieldset>
 
