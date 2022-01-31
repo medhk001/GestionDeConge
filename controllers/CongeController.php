@@ -8,9 +8,8 @@ class CongeController{
     }
 
     public function getMonConge(){
-        $Matricul = "AZERTY";
-        if($Matricul === "AZERTY"){
-            $data['Matricul'] = $Matricul;
+        if(isset($_SESSION['Matricul'])){
+            $data['Matricul'] =$_SESSION['Matricul'];
             $MonConge = Conge::getMonConge($data);
             return $MonConge;
         }

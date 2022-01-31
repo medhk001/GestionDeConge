@@ -104,8 +104,8 @@ footer{text-align: center;margin-top: 3%;}
 <fieldset style="margin-left:25%"><legend><img src="./public/images/demande.png"></legend>
 <form method="post">
 	
-	<p class="confirm"><em> Conge</em></p>
-<input type="hidden" name="Matricul" value='AZERTY'>
+	<p class="confirm"><em>Demande de Conge</em></p>
+<input type="hidden" name="Matricul" value="<?php echo $_SESSION['Matricul'];?>">
 <input type="hidden" name="dateajout" value='<?php echo date("Y/m/d");?>'>
 <label>Date Départ: </label> <input type="date" name="datedepart" required>
 <label style="margin-left:1em;">Date Retour : </label><input type="date" name="dateretour" required><br><br>

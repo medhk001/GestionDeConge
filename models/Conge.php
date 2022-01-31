@@ -46,9 +46,10 @@ class Conge{
     }
 
     static public function getMonConge($data){
-        $Matricul = $data['Matricul'];
-        $stmt = DB::connect()->prepare('SELECT * FROM demande WHERE Matricul= :Matricul');
+        // $Matricul = $data['Matricul'];
+        $stmt = DB::connect()->prepare('SELECT * FROM demande WHERE Matricul= :Matricul');      
         $stmt->execute();
+        // die(print_r($stmt));
         return $stmt->fetchAll();
         $stmt->close();
         $stmt = null; 

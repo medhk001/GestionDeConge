@@ -116,12 +116,12 @@ footer{text-align: center;margin-top: 3%;}
 <form method="post">
 	
 	<p class="confirm"><em> Modifier le Conge</em></p>
-<input type="hidden" name="Matricul" value='AZERTY'>
+<input type="hidden" name="Matricul" value="<?php echo $_SESSION['Matricul'];?>">
 <input type="hidden" name="dateajout" value='<?php echo date("Y/m/d");?>'>
 <label>Date Départ: </label> <input type="date" name="datedepart" value='<?php echo $exEm->datedepart;?>' required>
 <label style="margin-left:1em;">Date Retour : </label><input type="date" name="dateretour" value='<?php echo $exEm->dateretour;?>' required><br><br>
 <select class="form-select form-select-sm" name='typeConge' aria-label=".form-select-sm example">
-  <option selected value='#'>value='<?php echo $exEm->typeConge;?>'</option>
+  <option selected value='#'><?php echo $exEm->typeConge;?></option>
   <option value="congés payés">congés payés</option>
   <option value="congés sans solde">congés sans solde</option>
   <option value="maladie">maladie</option>
@@ -132,7 +132,7 @@ footer{text-align: center;margin-top: 3%;}
   <option value="récupération d'heures supplémentaires">récupération d'heures supplémentaires</option>
 </select><br><br>
 <select class="form-select form-select-sm" name='etat' aria-label=".form-select-sm example">
-  <option selected value='#'>value='<?php echo $exEm->etat;?>'</option>
+  <option selected value='#'><?php echo $exEm->etat;?></option>
   <option value="Accepte">Accepte</option>
   <option value="Refuses">Refuses</option>
   <option value="Encours de traitement">Encours de traitement</option>
